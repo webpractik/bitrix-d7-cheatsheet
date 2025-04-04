@@ -164,10 +164,10 @@ Bitrix\Main\Loader::includeModule("catalog");
 
 // Допустим некоторые поля приходит в запросе
 $request = Context::getCurrent()->getRequest();
-$productId = $request["PRODUCT_ID"];
-$phone = $request["PHONE"];
-$name = $request["NAME"];
-$comment = $request["COMMENT"];
+$productId = $request->get('PRODUCT_ID');
+$phone = $request>get('PHONE');
+$name = $request>get('NAME');
+$comment = $request>get('COMMENT');
 
 $siteId = Context::getCurrent()->getSite();
 $currencyCode = CurrencyManager::getBaseCurrency();
